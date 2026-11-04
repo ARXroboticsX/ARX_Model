@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="LIFT3">
+  <!-- Materials matched to 渲染图.png -->
+  <material name="lift_white">
+    <color rgba="0.92 0.92 0.93 1" />
+  </material>
+  <material name="lift_black">
+    <color rgba="0.10 0.10 0.12 1" />
+  </material>
+  <material name="lift_silver">
+    <color rgba="0.78 0.78 0.80 1" />
+  </material>
+  <material name="lift_rubber">
+    <color rgba="0.06 0.06 0.065 1" />
+  </material>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00723595345007452 9.8622162146289E-06 0.100000590812141"
+        rpy="0 0 0" />
+      <mass
+        value="21.9398786763463" />
+      <inertia
+        ixx="0.38093459"
+        ixy="-0.00001749"
+        ixz="0.00344648"
+        iyy="0.45902111"
+        iyz="0.00001946"
+        izz="0.49682621" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/base_link_shell.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/base_link_column.STL" />
+      </geometry>
+      <material
+        name="lift_silver" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="0.0297999945162294 -8.44823830142838E-07 -3.14334003792549E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.497245842315397" />
+      <inertia
+        ixx="0.00141273"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00079395"
+        iyz="-0.00000002"
+        izz="0.00079388" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="lift_rubber" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0.1952 0.1552 0.03"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="0.0297999987925563 -8.4015135198845E-07 -3.14521042177329E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.497245807865623" />
+      <inertia
+        ixx="0.00141273"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00079395"
+        iyz="-0.00000002"
+        izz="0.00079388" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="lift_rubber" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0.1952 -0.1552 0.03"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="0.0297999945038742 -8.439503120794E-07 -3.14324896588669E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.497245859023115" />
+      <inertia
+        ixx="0.00141273"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00079395"
+        iyz="-0.00000002"
+        izz="0.00079388" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="lift_rubber" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="-0.1952 -0.1552 0.03"
+      rpy="0 0 -2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="wheel4">
+    <inertial>
+      <origin
+        xyz="0.0297999945268945 -8.44817010681176E-07 -3.14314107474623E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.497245844623947" />
+      <inertia
+        ixx="0.00141273"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00079395"
+        iyz="-0.00000002"
+        izz="0.00079388" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel4.STL" />
+      </geometry>
+      <material
+        name="lift_rubber" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/wheel4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="-0.1952 0.1552 0.03"
+      rpy="0 0 2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="7"
+      velocity="20" />
+  </joint>
+  <link
+    name="body5">
+    <inertial>
+      <origin
+        xyz="0.00634197738868791 2.47110688189611E-07 0.0340062616699561"
+        rpy="0 0 0" />
+      <mass
+        value="7.3075810264343" />
+      <inertia
+        ixx="0.20854510"
+        ixy="0.00000030"
+        ixz="-0.00714197"
+        iyy="0.10956672"
+        iyz="-0.00000389"
+        izz="0.11907417" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/body5_white.STL" />
+      </geometry>
+      <material
+        name="lift_white" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/body5_column.STL" />
+      </geometry>
+      <material
+        name="lift_silver" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/body5_black.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/body5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="prismatic">
+    <origin
+      xyz="-0.01437 0 0.3915"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="body5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.38"
+      effort="6"
+      velocity="0.0333" />
+  </joint>
+  <link
+    name="left_link11">
+    <inertial>
+      <origin
+        xyz="0.00457902288318537 -0.0043030834568763 0.0156181246472304"
+        rpy="0 0 0" />
+      <mass
+        value="0.0878504534026056" />
+      <inertia
+        ixx="0.00009996"
+        ixy="0.00000084"
+        ixz="-0.00001100"
+        iyy="0.00004000"
+        iyz="0.00000238"
+        izz="0.00009523" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link11.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint11"
+    type="revolute">
+    <origin
+      xyz="0.0085 0.2 0.1125"
+      rpy="0 0 0" />
+    <parent
+      link="body5" />
+    <child
+      link="left_link11" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link12">
+    <inertial>
+      <origin
+        xyz="-0.132587152738995 -0.00500012843229072 3.57710084555318E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.943292722252087" />
+      <inertia
+        ixx="0.00045075"
+        ixy="-0.00001476"
+        ixz="0.00001704"
+        iyy="0.01517997"
+        iyz="-0.00000072"
+        izz="0.01521078" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link12.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint12"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="left_link11" />
+    <child
+      link="left_link12" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link13">
+    <inertial>
+      <origin
+        xyz="0.179000203315409 -0.000894648828288797 0.051116916029498"
+        rpy="0 0 0" />
+      <mass
+        value="0.63106019680517" />
+      <inertia
+        ixx="0.00046499"
+        ixy="-0.00010182"
+        ixz="-0.00051676"
+        iyy="0.00502321"
+        iyz="-0.00002550"
+        izz="0.00497247" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link13_white.STL" />
+      </geometry>
+      <material
+        name="lift_white" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link13_black.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link13_logo.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint13"
+    type="revolute">
+    <origin
+      xyz="-0.264 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_link12" />
+    <child
+      link="left_link13" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link14">
+    <inertial>
+      <origin
+        xyz="0.0405135566733644 -0.00433039283077064 0.0535177214923492"
+        rpy="0 0 0" />
+      <mass
+        value="0.166156507378479" />
+      <inertia
+        ixx="0.00022196"
+        ixy="-0.00001947"
+        ixz="-0.00009615"
+        iyy="0.00026792"
+        iyz="-0.00002352"
+        izz="0.00021007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link14.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint14"
+    type="revolute">
+    <origin
+      xyz="0.24503 0 0.05588"
+      rpy="0 0 0" />
+    <parent
+      link="left_link13" />
+    <child
+      link="left_link14" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link15">
+    <inertial>
+      <origin
+        xyz="0.00295041040995979 5.80443677558606E-06 -0.0545671743529674"
+        rpy="0 0 0" />
+      <mass
+        value="0.69695248150675" />
+      <inertia
+        ixx="0.00094767"
+        ixy="-0.00000046"
+        ixz="0.00005003"
+        iyy="0.00093613"
+        iyz="-0.00000023"
+        izz="0.00029130" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link15.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint15"
+    type="revolute">
+    <origin
+      xyz="0.06775 -0.0005 0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="left_link14" />
+    <child
+      link="left_link15" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link16">
+    <inertial>
+      <origin
+        xyz="0.0415542928923711 2.37830145945472E-05 0.000141165570865853"
+        rpy="0 0 0" />
+      <mass
+        value="0.451727235509068" />
+      <inertia
+        ixx="0.00037961"
+        ixy="0.00000018"
+        ixz="-0.00000422"
+        iyy="0.00028316"
+        iyz="0.00000165"
+        izz="0.00050542" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link16.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint16"
+    type="revolute">
+    <origin
+      xyz="0.02895 0 -0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="left_link15" />
+    <child
+      link="left_link16" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="left_link17">
+    <inertial>
+      <origin
+        xyz="-0.0003552225921317 -0.00782703850949985 -0.00298831676915334"
+        rpy="0 0 0" />
+      <mass
+        value="0.0647981743053202" />
+      <inertia
+        ixx="0.00002362"
+        ixy="0.00000354"
+        ixz="-0.00000141"
+        iyy="0.00003030"
+        iyz="-0.00000139"
+        izz="0.00003182" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link17.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint17"
+    type="prismatic">
+    <origin
+      xyz="0.08657 0.024896 -0.0002436"
+      rpy="0 0 0" />
+    <parent
+      link="left_link16" />
+    <child
+      link="left_link17" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <link
+    name="left_link18">
+    <inertial>
+      <origin
+        xyz="-0.000355223470266779 0.007827687410604 0.00242005652832411"
+        rpy="0 0 0" />
+      <mass
+        value="0.0647981725781686" />
+      <inertia
+        ixx="0.00002396"
+        ixy="-0.00000354"
+        ixz="0.00000342"
+        iyy="0.00003063"
+        iyz="-0.00000072"
+        izz="0.00003182" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link18.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/left_link18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint18"
+    type="prismatic">
+    <origin
+      xyz="0.08657 -0.0249 -0.00024366"
+      rpy="0 0 0" />
+    <parent
+      link="left_link16" />
+    <child
+      link="left_link18" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <link
+    name="right_link21">
+    <inertial>
+      <origin
+        xyz="0.00457902288318479 -0.00430308345687624 0.0156181246472302"
+        rpy="0 0 0" />
+      <mass
+        value="0.0878504534026108" />
+      <inertia
+        ixx="0.00009996"
+        ixy="0.00000084"
+        ixz="-0.00001100"
+        iyy="0.00004000"
+        iyz="0.00000238"
+        izz="0.00009523" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link21.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint21"
+    type="revolute">
+    <origin
+      xyz="0.0085 -0.2 0.1125"
+      rpy="0 0 0" />
+    <parent
+      link="body5" />
+    <child
+      link="right_link21" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link22">
+    <inertial>
+      <origin
+        xyz="-0.132587152739181 -0.0050001284311908 3.57710095038044E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.943292722183826" />
+      <inertia
+        ixx="0.00045075"
+        ixy="-0.00001476"
+        ixz="0.00001704"
+        iyy="0.01517997"
+        iyz="-0.00000072"
+        izz="0.01521078" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link22.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint22"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="right_link21" />
+    <child
+      link="right_link22" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link23">
+    <inertial>
+      <origin
+        xyz="0.179000203364505 -0.000894648816755605 0.051116916030292"
+        rpy="0 0 0" />
+      <mass
+        value="0.631060196527244" />
+      <inertia
+        ixx="0.00046499"
+        ixy="-0.00010182"
+        ixz="-0.00051676"
+        iyy="0.00502321"
+        iyz="-0.00002550"
+        izz="0.00497247" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link23_white.STL" />
+      </geometry>
+      <material
+        name="lift_white" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link23_black.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link23_logo.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint23"
+    type="revolute">
+    <origin
+      xyz="-0.264 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_link22" />
+    <child
+      link="right_link23" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link24">
+    <inertial>
+      <origin
+        xyz="0.0405135566733642 -0.00433039283077075 0.053517721492349"
+        rpy="0 0 0" />
+      <mass
+        value="0.16615650737848" />
+      <inertia
+        ixx="0.00022196"
+        ixy="-0.00001947"
+        ixz="-0.00009615"
+        iyy="0.00026792"
+        iyz="-0.00002352"
+        izz="0.00021007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link24.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link24.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint24"
+    type="revolute">
+    <origin
+      xyz="0.24503 0 0.05588"
+      rpy="0 0 0" />
+    <parent
+      link="right_link23" />
+    <child
+      link="right_link24" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link25">
+    <inertial>
+      <origin
+        xyz="0.00288983158630945 -8.7675335151971E-06 -0.054550604361751"
+        rpy="0 0 0" />
+      <mass
+        value="0.695378955274006" />
+      <inertia
+        ixx="0.00094767"
+        ixy="-0.00000046"
+        ixz="0.00005003"
+        iyy="0.00093613"
+        iyz="-0.00000023"
+        izz="0.00029130" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link25.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link25.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint25"
+    type="revolute">
+    <origin
+      xyz="0.06775 -0.0005 0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="right_link24" />
+    <child
+      link="right_link25" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link26">
+    <inertial>
+      <origin
+        xyz="0.0415542928891813 2.37830163201114E-05 0.000141165567508983"
+        rpy="0 0 0" />
+      <mass
+        value="0.451727235471094" />
+      <inertia
+        ixx="0.00037961"
+        ixy="0.00000018"
+        ixz="-0.00000422"
+        iyy="0.00028316"
+        iyz="0.00000165"
+        izz="0.00050542" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link26.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link26.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint26"
+    type="revolute">
+    <origin
+      xyz="0.02895 0 -0.0845"
+      rpy="0 0 0" />
+    <parent
+      link="right_link25" />
+    <child
+      link="right_link26" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="right_link27">
+    <inertial>
+      <origin
+        xyz="-0.0003552225921317 -0.00782703850949984 -0.0029883167691529"
+        rpy="0 0 0" />
+      <mass
+        value="0.0647981743053201" />
+      <inertia
+        ixx="0.00002362"
+        ixy="0.00000354"
+        ixz="-0.00000141"
+        iyy="0.00003030"
+        iyz="-0.00000139"
+        izz="0.00003182" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link27.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link27.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint27"
+    type="prismatic">
+    <origin
+      xyz="0.08657 0.024896 -0.0002436"
+      rpy="0 0 0" />
+    <parent
+      link="right_link26" />
+    <child
+      link="right_link27" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <link
+    name="right_link28">
+    <inertial>
+      <origin
+        xyz="-0.000355223470266793 0.00782768741060402 0.00242005652832455"
+        rpy="0 0 0" />
+      <mass
+        value="0.0647981725781686" />
+      <inertia
+        ixx="0.00002396"
+        ixy="-0.00000354"
+        ixz="0.00000342"
+        iyy="0.00003063"
+        iyz="-0.00000072"
+        izz="0.00003182" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link28.STL" />
+      </geometry>
+      <material
+        name="lift_black" />
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LIFT3/meshes/right_link28.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint28"
+    type="prismatic">
+    <origin
+      xyz="0.08657 -0.0249 -0.00024366"
+      rpy="0 0 0" />
+    <parent
+      link="right_link26" />
+    <child
+      link="right_link28" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.044"
+      effort="300"
+      velocity="0.053" />
+  </joint>
+  <!-- Gazebo colours.
+       Every link is coloured through sdformat's URDF->SDF conversion, which turns each
+       visual's <material><color> into SDF ambient/diffuse (Gazebo 9 / ROS Melodic and newer).
+       No <gazebo reference> script materials (Gazebo/FlatBlack etc.) are used on purpose:
+       they shade differently from converted colours, which made the chassis black and the
+       arm black look different in Gazebo, and they cannot be applied per-visual on links
+       that carry several colours (base_link, body5, left_link13, right_link23). -->
+</robot>
