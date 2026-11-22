@@ -3,22 +3,29 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="X5A">
+  name="X5">
+  <!-- Materials matched to LIFT3 (渲染图.png) -->
+  <material name="x5_white">
+    <color rgba="0.92 0.92 0.93 1" />
+  </material>
+  <material name="x5_black">
+    <color rgba="0.10 0.10 0.12 1" />
+  </material>
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-3.0001E-05 3.0589E-05 0.027324"
+        xyz="-2.8646E-05 2.9914E-05 0.031769"
         rpy="0 0 0" />
       <mass
-        value="0.43995" />
+        value="0.46078" />
       <inertia
-        ixx="0.00017"
-        ixy="0.00000"
-        ixz="0.00000"
-        iyy="0.00017"
-        iyz="0.00000"
-        izz="0.00016" />
+        ixx="0.00019232"
+        ixy="0.00000035"
+        ixz="0.00000053"
+        iyy="0.00019176"
+        iyz="-0.00000106"
+        izz="0.00018296" />
     </inertial>
     <visual>
       <origin
@@ -26,13 +33,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/base_link.STL" />
+          filename="package://X5/meshes/base_link.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.75294 0.75294 0.75294 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -40,7 +44,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/base_link.STL" />
+          filename="package://X5/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +52,17 @@
     name="link1">
     <inertial>
       <origin
-        xyz="0.0054231 -0.0080289 0.017086"
+        xyz="0.00456632538632134 -0.0043412993377717 0.01562766514675"
         rpy="0 0 0" />
       <mass
-        value="0.066982" />
+        value="0.0877702913843106" />
       <inertia
-        ixx="0.00008"
-        ixy="0.00000"
-        ixz="0.00001"
-        iyy="0.00003"
-        iyz="0.00000"
-        izz="0.00008" />
+        ixx="0.00009981"
+        ixy="0.00000089"
+        ixz="-0.00001101"
+        iyy="0.00003997"
+        iyz="0.00000234"
+        izz="0.00009507" />
     </inertial>
     <visual>
       <origin
@@ -66,13 +70,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link1.STL" />
+          filename="package://X5/meshes/link1.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.79216 0.81961 0.93333 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -80,7 +81,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link1.STL" />
+          filename="package://X5/meshes/link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -97,26 +98,26 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="-2.618"
+      upper="3.1416"
+      effort="24"
+      velocity="12.566" />
   </joint>
   <link
     name="link2">
     <inertial>
       <origin
-        xyz="-0.13237 0.0020852 0.00010549"
+        xyz="-0.13259895904451 -0.00497040339768234 3.05164690020954E-05"
         rpy="0 0 0" />
       <mass
-        value="1.0795" />
+        value="0.963593223004188" />
       <inertia
-        ixx="0.00051"
-        ixy="0.00001"
-        ixz="-0.00004"
-        iyy="0.01599"
-        iyz="0.00000"
-        izz="0.01605" />
+        ixx="0.00039175"
+        ixy="-0.00001429"
+        ixz="0.00001705"
+        iyy="0.01549191"
+        iyz="-0.00000061"
+        izz="0.01550632" />
     </inertial>
     <visual>
       <origin
@@ -124,13 +125,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link2.STL" />
+          filename="package://X5/meshes/link2.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.75294 0.75294 0.75294 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -138,7 +136,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link2.STL" />
+          filename="package://X5/meshes/link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -155,26 +153,26 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="0"
+      upper="3.665"
+      effort="24"
+      velocity="12.566" />
   </joint>
   <link
     name="link3">
     <inertial>
       <origin
-        xyz="0.18531 0.00068376 -0.051638"
+        xyz="0.179474302231366 -0.00100121978498554 0.0513218899098548"
         rpy="0 0 0" />
       <mass
-        value="0.54534" />
+        value="0.628761232565645" />
       <inertia
-        ixx="0.00036"
-        ixy="-0.00003"
-        ixz="-0.00039"
-        iyy="0.00423"
-        iyz="0.00001"
-        izz="0.00420" />
+        ixx="0.00045882"
+        ixy="-0.00011256"
+        ixz="-0.00050443"
+        iyy="0.00496424"
+        iyz="-0.00002840"
+        izz="0.00491515" />
     </inertial>
     <visual>
       <origin
@@ -182,13 +180,32 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link3.STL" />
+          filename="package://X5/meshes/link3_white.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="1 0.98431 0.96471 1" />
-      </material>
+        name="x5_white" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://X5/meshes/link3_black.STL" />
+      </geometry>
+      <material
+        name="x5_black" />
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://X5/meshes/link3_logo.STL" />
+      </geometry>
+      <material
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -196,7 +213,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link3.STL" />
+          filename="package://X5/meshes/link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -205,34 +222,34 @@
     type="revolute">
     <origin
       xyz="-0.264 0 0"
-      rpy="3.1416 0 0" />
+      rpy="0 0 0" />
     <parent
       link="link2" />
     <child
       link="link3" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="0"
+      upper="3.1416"
+      effort="24"
+      velocity="12.566" />
   </joint>
   <link
     name="link4">
     <inertial>
       <origin
-        xyz="0.040231 0.0044807 -0.035335"
+        xyz="0.0402945176329473 -0.0042703378861436 0.0534168376309732"
         rpy="0 0 0" />
       <mass
-        value="0.11714" />
+        value="0.168303626297452" />
       <inertia
-        ixx="0.00019"
-        ixy="-0.00002"
-        ixz="-0.00009"
-        iyy="0.00023"
-        iyz="0.00002"
-        izz="0.00014" />
+        ixx="0.00022302"
+        ixy="-0.00001929"
+        ixz="-0.00009646"
+        iyy="0.00026905"
+        iyz="-0.00002344"
+        izz="0.00021138" />
     </inertial>
     <visual>
       <origin
@@ -240,13 +257,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link4.STL" />
+          filename="package://X5/meshes/link4.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.79216 0.81961 0.92941 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -254,7 +268,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link4.STL" />
+          filename="package://X5/meshes/link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -262,35 +276,35 @@
     name="joint4"
     type="revolute">
     <origin
-      xyz="0.245 0 -0.056"
+      xyz="0.245 0 0.056"
       rpy="0 0 0" />
     <parent
       link="link3" />
     <child
       link="link4" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="-1.5708"
+      upper="1.5708"
+      effort="6"
+      velocity="12.566" />
   </joint>
   <link
     name="link5">
     <inertial>
       <origin
-        xyz="0.003612 -1.5455E-05 0.055214"
+        xyz="0.0030407966587781 5.79611270706132E-06 -0.0542943106237003"
         rpy="0 0 0" />
       <mass
-        value="0.63488" />
+        value="0.694158291707304" />
       <inertia
-        ixx="0.00083"
-        ixy="0.00000"
-        ixz="0.00007"
-        iyy="0.00082"
-        iyz="0.00000"
-        izz="0.00026" />
+        ixx="0.00093522"
+        ixy="-0.00000046"
+        ixz="0.00005417"
+        iyy="0.00092243"
+        iyz="-0.00000023"
+        izz="0.00028955" />
     </inertial>
     <visual>
       <origin
@@ -298,13 +312,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link5.STL" />
+          filename="package://X5/meshes/link5.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.69804 0.69804 0.69804 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -312,7 +323,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link5.STL" />
+          filename="package://X5/meshes/link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -320,35 +331,35 @@
     name="joint5"
     type="revolute">
     <origin
-      xyz="0.06775 0.0005 -0.0865"
+      xyz="0.06775 -0.0005 0.0845"
       rpy="0 0 0" />
     <parent
       link="link4" />
     <child
       link="link5" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="-1.5708"
+      upper="1.5708"
+      effort="6"
+      velocity="12.566" />
   </joint>
   <link
     name="link6">
     <inertial>
       <origin
-        xyz="0.041697 2.4368E-05 0.00014464"
+        xyz="0.0417254931222494 2.36522035893597E-05 0.000140384864611792"
         rpy="0 0 0" />
       <mass
-        value="0.44089" />
+        value="0.454239426364513" />
       <inertia
-        ixx="0.00038"
-        ixy="0.00000"
-        ixz="0.00000"
-        iyy="0.00028"
-        iyz="0.00000"
-        izz="0.00050" />
+        ixx="0.00038084"
+        ixy="0.00000018"
+        ixz="-0.00000421"
+        iyy="0.00028683"
+        iyz="0.00000165"
+        izz="0.00050806" />
     </inertial>
     <visual>
       <origin
@@ -356,13 +367,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link6.STL" />
+          filename="package://X5/meshes/link6.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="0.89804 0.91765 0.92941 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -370,7 +378,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link6.STL" />
+          filename="package://X5/meshes/link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -378,8 +386,8 @@
     name="joint6"
     type="revolute">
     <origin
-      xyz="0.02895 0 0.0865"
-      rpy="-3.1416 0 0" />
+      xyz="0.02895 0 -0.0845"
+      rpy="0 0 0" />
     <parent
       link="link5" />
     <child
@@ -387,26 +395,26 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-10"
-      upper="10"
-      effort="100"
-      velocity="1000" />
+      lower="-2.094"
+      upper="2.094"
+      effort="6"
+      velocity="12.566" />
   </joint>
   <link
     name="link7">
     <inertial>
       <origin
-        xyz="-0.00035522 -0.007827 -0.0029883"
+        xyz="-0.000355222592131665 -0.00782703850949987 -0.00298831676915337"
         rpy="0 0 0" />
       <mass
-        value="0.064798" />
+        value="0.0647981743053199" />
       <inertia
-        ixx="0.00002"
-        ixy="0.00000"
-        ixz="0.00000"
-        iyy="0.00003"
-        iyz="0.00000"
-        izz="0.00003" />
+        ixx="0.00002362"
+        ixy="0.00000354"
+        ixz="-0.00000141"
+        iyy="0.00003030"
+        iyz="-0.00000139"
+        izz="0.00003182" />
     </inertial>
     <visual>
       <origin
@@ -414,13 +422,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link7.STL" />
+          filename="package://X5/meshes/link7.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -428,7 +433,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link7.STL" />
+          filename="package://X5/meshes/link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -447,24 +452,24 @@
     <limit
       lower="0"
       upper="0.044"
-      effort="100"
-      velocity="1000" />
+      effort="10"
+      velocity="0.053" />
   </joint>
   <link
     name="link8">
     <inertial>
       <origin
-        xyz="-0.00035522 0.0078277 0.0024201"
+        xyz="-0.000355223470266675 0.00782768741062043 0.00242005652842325"
         rpy="0 0 0" />
       <mass
-        value="0.064798" />
+        value="0.0647981725781684" />
       <inertia
-        ixx="0.00002"
-        ixy="0.00000"
-        ixz="0.00000"
-        iyy="0.00003"
-        iyz="0.00000"
-        izz="0.00003" />
+        ixx="0.00002396"
+        ixy="-0.00000354"
+        ixz="0.00000342"
+        iyy="0.00003063"
+        iyz="-0.00000072"
+        izz="0.00003182" />
     </inertial>
     <visual>
       <origin
@@ -472,13 +477,10 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link8.STL" />
+          filename="package://X5/meshes/link8.STL" />
       </geometry>
       <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+        name="x5_black" />
     </visual>
     <collision>
       <origin
@@ -486,7 +488,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://X5A/meshes/link8.STL" />
+          filename="package://X5/meshes/link8.STL" />
       </geometry>
     </collision>
   </link>
@@ -505,7 +507,12 @@
     <limit
       lower="0"
       upper="0.044"
-      effort="100"
-      velocity="1000" />
+      effort="10"
+      velocity="0.053" />
   </joint>
+  <!-- Gazebo colours.
+       Every link is coloured through sdformat's URDF->SDF conversion, which turns each
+       visual's <material><color> into SDF ambient/diffuse (Gazebo 9 / ROS Melodic and newer).
+       No <gazebo reference> script materials are used, because link3 carries several
+       colours (white shell, black motor housing, black ARX logo). -->
 </robot>
